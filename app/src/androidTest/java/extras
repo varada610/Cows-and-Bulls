@@ -1,0 +1,28 @@
+<android.support.design.widget.TextInputLayout
+            android:id="@+id/entryLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/textStyle"
+            android:layout_alignLeft="@+id/title"
+            android:layout_below="@+id/divider">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/themeColor"
+            android:id="@+id/entry"
+            android:ems="6"
+            android:hint=" Enter trial"
+            android:inputType="number"
+            android:textStyle="bold"
+            android:textColor="@color/darkGreen"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/enter"
+            android:id="@+id/play"
+            android:layout_toRightOf="@+id/entryLayout"
+            android:layout_alignTop="@+id/entryLayout"
+            android:layout_marginTop="5dp"/>

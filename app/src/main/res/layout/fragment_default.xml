@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="layout.DefaultFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/entryLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/textStyle"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="end"
+        android:layout_marginRight="85dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/themeColor"
+            android:id="@+id/entry"
+            android:ems="6"
+            android:hint=" Enter trial"
+            android:inputType="number"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="@color/darkGreen" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/enter"
+        android:id="@+id/play"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="@dimen/smallDist"
+        android:layout_gravity="end" />
+
+</FrameLayout>

@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/themeColor</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="textStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/darkGreen</item>
+        <item name="android:textStyle">bold</item>
+
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/themeColor</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/themeColor</item>
+        <item name="colorControlNormal">@color/themeColor</item>
+        <item name="colorControlActivated">@color/themeColor</item>
+    </style>
+
+    <style name="cowRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_cow</item>
+        <item name="android:minHeight">23dp</item>
+        <item name="android:maxHeight">25dp</item>
+    </style>
+
+    <style name="bullRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bull</item>
+        <item name="android:minHeight">23dp</item>
+        <item name="android:maxHeight">25dp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

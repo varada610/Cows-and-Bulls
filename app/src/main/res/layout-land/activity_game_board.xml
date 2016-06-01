@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="puzzle.board.game.cowsandbulls.GameBoard">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_game_board" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/entriesLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cow"
+            android:src="@drawable/cow"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bull"
+            android:src="@drawable/bull"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/title"
+            android:id="@+id/title"
+            android:layout_toRightOf="@+id/cow"
+            android:paddingTop="@dimen/smallDist"
+            android:paddingBottom="@dimen/smallDist"
+            android:layout_alignBottom="@id/bull"
+            android:layout_toLeftOf="@id/bull"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:id="@+id/divider"
+            android:layout_marginTop="10dp"
+            android:background="@color/themeColor"
+            android:layout_below="@id/bull"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/entryLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/textStyle"
+            android:layout_below="@+id/divider"
+            android:layout_toLeftOf="@+id/play">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/themeColor"
+            android:id="@+id/entry"
+            android:ems="6"
+            android:hint=" Enter trial"
+            android:inputType="number"
+            android:textStyle="bold"
+            android:textColor="@color/darkGreen"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/enter"
+            android:id="@+id/play"
+            android:layout_toLeftOf="@+id/bull"
+            android:layout_marginRight="@dimen/smallDist"
+            android:layout_below="@+id/divider"
+            android:layout_marginTop="5dp"/>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/trials"
+            android:background="@drawable/border"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="@dimen/smallDist"
+            android:layout_marginLeft="@dimen/smallDist"
+            android:layout_below="@id/play"/>
+
+        <com.sa90.materialarcmenu.ArcMenu
+            android:id="@+id/arcmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:menu_color="@color/white"
+            app:menu_open="arc_right"
+            app:menu_scr="@drawable/menu"
+            android:layout_below="@+id/divider"
+            android:layout_alignTop="@+id/play"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/smallDist">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/giveUP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/give_up"
+                app:backgroundTint="@color/white" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/play_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/reset"
+                app:backgroundTint="@color/white" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_arc_menu_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_dialog_email"
+                app:backgroundTint="#0fb33d" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_arc_menu_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:src="@android:drawable/ic_dialog_email"
+                app:backgroundTint="#0fb33d" />
+
+        </com.sa90.materialarcmenu.ArcMenu>
+
+        </RelativeLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

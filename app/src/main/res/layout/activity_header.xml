@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="puzzle.board.game.cowsandbulls.header">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_header" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:id="@+id/row">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="Index"
+            android:theme="@style/textStyle"
+            android:textColor="@color/themeColor"
+            android:id="@+id/index"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/textStyle"
+            android:textColor="@color/themeColor"
+            android:text="Trial"
+            android:id="@+id/trial"
+            android:layout_alignBottom="@id/index"
+            android:layout_marginLeft="75dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+           android:text="Cows"
+            android:theme="@style/textStyle"
+            android:textColor="@color/themeColor"
+            android:layout_alignBottom="@id/index"
+            android:id="@+id/cowRating"
+            android:layout_marginLeft="145dp"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/textStyle"
+            android:textColor="@color/themeColor"
+            android:text="Bulls"
+            android:layout_alignBottom="@id/index"
+            android:id="@+id/bullRating"
+            android:layout_marginLeft="245dp"
+            android:layout_alignParentTop="true" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

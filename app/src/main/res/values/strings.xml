@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Cows and Bulls</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_rules">Rules</string>
+    <string name="title_activity_game_board">GameBoard</string>
+    <string name="title_activity_custom_trial">custom_trial</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_header">header</string>
+</resources>

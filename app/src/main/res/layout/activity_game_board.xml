@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="puzzle.board.game.cowsandbulls.GameBoard">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_game_board" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/entriesLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cow"
+            android:src="@drawable/cow"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bull"
+            android:src="@drawable/bull"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/title"
+            android:id="@+id/title"
+            android:layout_toRightOf="@+id/cow"
+            android:paddingTop="@dimen/smallDist"
+            android:paddingBottom="@dimen/smallDist"
+            android:layout_alignBottom="@id/bull"
+            android:layout_toLeftOf="@id/bull"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:id="@+id/divider"
+            android:layout_marginTop="10dp"
+            android:background="@color/themeColor"
+            android:layout_below="@id/bull"/>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider"
+            android:id="@+id/fragmentLayout"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true">
+            </LinearLayout>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/trials"
+            android:background="@drawable/border"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginRight="@dimen/smallDist"
+            android:layout_marginLeft="@dimen/smallDist"
+            android:layout_below="@id/fragmentLayout"
+            android:layout_above="@+id/arcmenu"/>
+
+        <com.sa90.materialarcmenu.ArcMenu
+            android:id="@+id/arcmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:menu_color="@color/white"
+            app:menu_open="arc_left"
+            app:menu_scr="@drawable/menu"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/smallDist">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/giveUP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/give_up"
+                app:backgroundTint="@color/white" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/play_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/reset"
+                android:tag="Reset"
+                app:backgroundTint="@color/white" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/rules"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rules"
+                app:backgroundTint="@color/white" />
+
+        </com.sa90.materialarcmenu.ArcMenu>
+
+        </RelativeLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
